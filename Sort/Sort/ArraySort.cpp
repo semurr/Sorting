@@ -18,7 +18,26 @@ ArraySort::ArraySort()
 }
 
 //main functions
+void ArraySort::BubbleSort()
+{
+	bool change = false;  //counter for if swaps happen
+	for(int i = 0; i < sortSize - 1; i++)
+	{
+		if(sort[i] > sort[i+1])  //check if first value is greater than second
+		{
+			swap(sort[i], sort[i+1]);
+			change = true;
+		}
+	}
 
+	if(change == false) //if no swap happens return else recall funciton
+	{
+		return;
+	}
+	
+	BubbleSort();
+	
+}
 //randomly scrable the array
 void ArraySort::Scramble()
 {
@@ -39,9 +58,17 @@ void ArraySort::Scramble()
 void ArraySort::Swap(int i, int y)
 {
 	//swap out variables without creating extra memory 
+	if( i != y)
+	{
 		sort[i] = sort[i] + sort[y];
 		sort[y] = sort[i] - sort[y];
-		sort[i] = sort[i] - sort[y];	
+		sort[i] = sort[i] - sort[y];
+	}
+
+	//int temp = sort[i];
+	//sort[i] = sort[y];
+	//sort[y] = temp;
+
 }
 
 //print the array out to read
