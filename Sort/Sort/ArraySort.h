@@ -14,6 +14,7 @@ public:
 	ArraySort();
 	void BubbleSort();
 	void Selection();
+	void Insertion();
 	void Scramble();
 	void Swap(int, int);
 	void Print();

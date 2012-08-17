@@ -22,7 +22,7 @@ int main()
 
 	//attempt sort
 	cout << "sorted array list" << endl;
-	temp1.Selection();
+	temp1.Insertion();
 	//print results
 	temp1.Print();
 

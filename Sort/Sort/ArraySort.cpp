@@ -38,7 +38,7 @@ void ArraySort::BubbleSort()
 	BubbleSort();
 	
 }
-
+//selection sort
 void ArraySort::Selection()    // O(n^2)
 {
 	int lowest;
@@ -54,6 +54,21 @@ void ArraySort::Selection()    // O(n^2)
 		}
 		Swap(i, lowest);
 	}
+}
+
+void ArraySort::Insertion()
+{
+	for(int i = 1; i < sortSize; i++)
+	{
+		for(int j = i; j > 0; j--)
+		{
+			if(sort[j-1] > sort[j])
+			{
+				Swap(j-1, j);
+			}
+		}
+	}
+
 }
 //randomly scrable the array
 void ArraySort::Scramble()
