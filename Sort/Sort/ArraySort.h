@@ -13,6 +13,7 @@ private:
 public:
 	ArraySort();
 	void BubbleSort();
+	void Selection();
 	void Scramble();
 	void Swap(int, int);
 	void Print();
